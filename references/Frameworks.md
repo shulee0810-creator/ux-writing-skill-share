@@ -1,46 +1,45 @@
-# 聲音、語調與格式框架
+# Voice, Tone, and Formatting Frameworks
 
-## 品牌聲音 (Voice)
-Voice 是固定不變的品牌個性：
-- **專業但不冰冷**：以專業為基底，平易近人，不官腔、不命令。
-- **清晰直接**：降低理解成本，少廢話。
-- **支持性與解決導向**：提供可行解法，減少錯誤焦慮。
+## Brand Voice
+Voice is the fixed and unchangeable brand personality:
+- **Professional but not cold**: Professional at its core, approachable, not bureaucratic or commanding.
+- **Clear and direct**: Reduces the cost of understanding, minimizes fluff.
+- **Supportive and solution-oriented**: Provides actionable solutions, reduces anxiety over errors.
 
-## 情境語調矩陣 (Tone Matrix)
-Tone 會依使用者當下狀態進行調整：
+## Contextual Tone Matrix
+Tone is adjusted based on the user's current state:
 
-| 情境 | 語調策略 | 規範建議 | 範例 |
+| Scenario | Tone Strategy | Guideline Suggestions | Example |
 | :--- | :--- | :--- | :--- |
-| **入門/介紹** | 親切、鼓勵 | 引導完成設定，正向語句 | 歡迎加入！我們會帶你快速上手。 |
-| **任務完成** | 支持、正向 | 簡短肯定操作，避免過度情緒化 | 設定已成功更新。 |
-| **指引/幫助** | 清晰、耐心 | 採分步式敘述，避免抽象說明 | 請選擇資料來源，並點擊「建立」。 |
-| **通知** | 中立、資訊性 | 聚焦資訊傳達，不製造緊張感 | 您的訂閱將於 3 天後續訂。 |
-| **錯誤訊息** | 同理、安撫 | 提供解決方案，嚴禁責備 | 抱歉，系統暫時無法處理。請稍後再試。 |
+| **Onboarding/Introduction** | Friendly, encouraging | Guide to complete setup, positive statements | Welcome aboard! We'll get you up to speed quickly. |
+| **Task Success** | Supportive, positive | Briefly affirm the action, avoid being overly emotional | Settings successfully updated. |
+| **Guide/Help** | Clear, patient | Use step-by-step descriptions, avoid abstract explanations | Please select a data source and click "Create". |
+| **Notification** | Neutral, informational | Focus on conveying information, do not create tension | Your subscription will renew in 3 days. |
+| **Error Message** | Empathetic, reassuring | Provide a solution, strictly avoid blaming | Sorry, the system is temporarily unable to process this. Please try again later. |
 
-## 國際化格式規範 (i18n Formatting)
+## i18n Formatting Guidelines
 
-### 1. 日期格式 (Date)
-| 地區 | 格式範例 | 規範 |
+### 1. Date Formatting
+| Region | Format Example | Guideline |
 | :--- | :--- | :--- |
-| **台灣** | 2025/01/01 週一 | 使用 `/` 分割，MM/DD 補零 |
-| **日本** | 2025/01/01 月曜日 | 排列順序依地制宜 |
-| **越南** | 01/01/2025 Thứ Hai | 視為 B2B 系統核心規範 |
-| **北美** | Mon, 01/01/2025 | 需支援 Syncfusion 標準格式 |
-| **中國** | 2025-01-01 週一
+| **Taiwan** | 2025/01/01 Mon | Use `/` as a separator, pad MM/DD with zeros |
+| **Japan** | 2025/01/01 月曜日 | Order according to local conventions |
+| **Vietnam** | 01/01/2025 Thứ Hai | Considered a core guideline for B2B systems |
+| **North America** | Mon, 01/01/2025 | Must support Syncfusion standard formatting |
+| **China** | 2025-01-01 Mon | |
 
+### 2. Currency Formatting
+* **Principles**: Amounts must be **right-aligned** to easily compare digits.
+* **Examples**: Taiwan (NT$ 1,000), Japan (¥1,000), Vietnam (1.000 ₫).
 
-### 2. 貨幣格式 (Currency)
-* **原則**：金額須**靠右對齊**以便比對位數。
-* **範例**：台灣 (NT$ 1,000)、日本 (¥1,000)、越南 (1.000 ₫)。
+### 3. Name Field Structure
+* **Taiwan/Japan**: Last Name / First Name (Last name first).
+* **North America**: First / Last Name.
+* **Vietnam**: FBM systems do not strictly require a three-part name (for efficiency); identity verification systems require the full name.
 
-### 3. 姓名欄位結構
-* **台灣/日本**：姓 / 名（姓在前）。
-* **北美**：First / Last Name。
-* **越南**：餐飲系統不強制要求三段姓名（追求效率）；身份驗證系統則需完整姓名。
-
-## 專業術語使用前提
-當主要使用者為產業從業人員時，應優先使用業界通用術語，但須符合：
-1. **業界通用**：非公司內部黑話。
-2. **語義唯一**：同一概念僅使用一個詞彙。
-3. **一致性**：建立報表 vs 新增報表，應統一使用一個動詞。
-4. **文案應採性別中立用語**：降低文化誤解與歧視風險。例如：使用「使用者」、「客戶」替代「他／她」。
+## Prerequisites for Using Professional Terminology
+When the primary users are industry professionals, industry-standard terminology should be prioritized, but must comply with:
+1. **Industry-standard**: Not internal company jargon.
+2. **Semantic uniqueness**: Only use one term for the same concept.
+3. **Consistency**: "Create report" vs. "Add report"—a single verb should be uniformly used.
+4. **Copy should use gender-neutral language**: Reduces the risk of cultural misunderstanding and discrimination. For example: Use "User" or "Client" instead of "he/she".
