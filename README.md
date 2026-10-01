@@ -1,71 +1,71 @@
 # UX Writing Skill (UX Writing Knowledge Base)
 
-本skill知識庫是專為 **2B 系統產品（如 ERP、FBM、CRS、PMS）** 開發的 UX Writing 專業指引。旨在建立跨產品、跨語系的品牌語言一致性，並降低多語系翻譯的破版風險。
+This skill knowledge base is a professional UX Writing guideline specifically developed for **B2B system products, including Enterprise Resource Planning (ERP), Food and Beverage Management (FBM), Central Reservation Systems (CRS), and Property Management Systems (PMS).** It aims to establish brand language consistency across products and languages while minimizing the risk of UI layout breaks during multilingual translations.
 
-這套結構化的 Markdown 檔案不僅是設計規範，更可直接作為 **AI 共用技能 (Skill Set)**，支援團隊成員在不同的 AI 工具中快速調用。
-
----
-
-## 📁 檔案結構與用途
-
-### 1. SKILL.md (主指令檔)
-* **核心內容**：包含寫作原則、錯誤訊息公式、空狀態指引以及 i18n 技術規範。
-* **主要用途**：作為 AI 的「大腦」，賦予其專業 UX Writer 的決策能力，確保產出符合「專業、清晰、支持性」的品牌聲音。
-
-### 2. references/Frameworks.md (調性參考檔)
-* **核心內容**：定義不變的品牌聲音 (Voice) 與隨情境變動的語調矩陣 (Tone Matrix)。
-* **主要用途**：協助 AI 根據使用者當下的情緒（如：任務成功、操作錯誤或新手入門）調整語氣。
-
-### 3. references/Terminology.md (多語系詞彙庫)
-* **核心內容**：提供台灣、日本、北美、越南等市場的標準操作詞彙與訊息模板。
-* **主要用途**：確保跨語系介面的一致性，防止 AI 產生不符合產業慣例的生硬翻譯。
+These structured Markdown files serve not only as design guidelines but also directly as an **AI shared skill (Skill Set)**, supporting team members in quickly invoking them across different AI tools.
 
 ---
 
-## 🚀 跨 AI 使用說明 (Cross-Platform AI Usage)
+## 📁 File Structure & Purpose
 
-本知識庫採用通用 Markdown 格式，具備高度的**可移植性**。團隊成員只需將檔案內容提供給 AI，即可讓不同模型具備一致的審稿標準：
+### 1. SKILL.md (Main Instruction File)
+* **Core Content**: Includes writing principles, error message formulas, empty state guidelines, and i18n technical specifications.
+* **Main Purpose**: Acts as the "brain" of the AI, empowering it with the decision-making capabilities of a professional UX Writer to ensure outputs align with a "professional, clear, and supportive" brand voice.
 
-### 🔹 在 Claude (Projects) 使用
-1. 在Settings->capabilities->Skills->Add->**Upload a skill**
-2. 建立一個新專案 (Project)。
-3. 請claude確認是否有引用skill成功。
-4. Claude 將自動在對話中遵循這些規範進行文案建議。
+### 2. references/Frameworks.md (Tone Reference File)
+* **Core Content**: Defines the consistent brand Voice and the context-dependent Tone Matrix.
+* **Main Purpose**: Assists the AI in adjusting its tone based on the user's current emotional state (e.g., task success, operational error, or onboarding).
 
-### 🔹 在 ChatGPT (My GPTs) 使用
-1. 建立自定義 GPTs。
-2. 將檔案上傳至 **Knowledge** 區塊。
-3. 在 Instructions 中註明：「請優先參考 Knowledge 中的規範來審查或撰寫 UI 文案。」
-
-### 🔹 在對話中直接調用 (Direct Prompting)
-1. 直接複製 `SKILL.md` 的內容作為對話開頭（System Prompt），賦予 AI 專業角色。
-2. 隨後輸入 UI 草稿，要求 AI 根據規範進行優化。
-
-### 🔹撰寫提示語 
-請根據我提供的知識庫文件（SKILL.md、Frameworks.md、Terminology.md）執行 UX Writing 任務。
-1. 使用產品：{CRS 預約中心}
-2. 情境：{入門介紹/任務成功/幫助指引/錯誤訊息/通知/空狀態 - 簡易描述}
-3. 原始文案：{「預約失敗！因為 {{hotel_name}} 的 {{room_type}} 有庫存衝突，請調整時間或是日期。」}
-4. 請按照檢查清單做審查並優化文案語調與用詞，並提供建議的按鈕文案，請同時輸出繁體中文與英文兩個版本。
+### 3. references/Terminology.md (Multilingual Terminology Base)
+* **Core Content**: Provides standard operational terminology and message templates for markets such as Taiwan, Japan, North America, and Vietnam.
+* **Main Purpose**: Ensures consistency across multilingual interfaces and prevents the AI from generating stiff translations that do not conform to industry conventions.
 
 ---
 
-## 🛠️ 自動化與工具規劃 (Future Roadmap)
-後續要補上各產品線的常用詞彙知識，例如：訂位、候位、候補等詞彙，飯店用C/I, C/O...等。
+## 🚀 Cross-Platform AI Usage
 
-為了讓規範更易於整合進開發流程，`scripts/` 資料夾預計開發以下自動化工具：
+This knowledge base adopts the universal Markdown format, offering high **portability**. Team members simply need to provide the file content to the AI to enable consistent review standards across different models:
 
-* **文案檢查腳本 (Linter)**：自動偵測「句中變數」或「半形標點」等違反 `SKILL.md` 規範的錯誤。
-* **Figma 詞彙同步**：將 `Terminology.md` 轉換為 JSON 格式，供 Figma 插件調用一鍵切換多語系文案。
-* **AI Agent 封裝**：將知識庫結合自動化腳本，實現自動化審查與跨系統更新（如同步至 Notion 或 Slack）。
-* **多語系破版預測**：腳本可根據 UX Writing.md 中提到的各語系長度差異（如：英文/越南文通常比中文長），自動生成模擬長文字的測試清單，預先判斷按鈕或表格是否會因字數爆炸而破版。
+### 🔹 Usage in Claude (Projects)
+1. Go to Settings -> Capabilities -> Skills -> Add -> **Upload a skill**.
+2. Create a new Project.
+3. Ask Claude to confirm if the skill was successfully referenced.
+4. Claude will automatically follow these guidelines to provide copy recommendations in the conversation.
+
+### 🔹 Usage in ChatGPT (My GPTs)
+1. Create a custom GPT.
+2. Upload the files to the **Knowledge** section.
+3. Specify in the Instructions: "Please prioritize the guidelines in the Knowledge section to review or write UI copy."
+
+### 🔹 Usage via Direct Prompting
+1. Directly copy the contents of `SKILL.md` as the start of the conversation (System Prompt) to assign the AI a professional role.
+2. Subsequently, input the UI draft and ask the AI to optimize it based on the guidelines.
+
+### 🔹 Writing Prompts
+Please execute the UX Writing task based on the provided knowledge base files (SKILL.md, Frameworks.md, Terminology.md).
+1. Product Used: {CRS Reservation Center}
+2. Scenario: {Onboarding/Task Success/Help Guide/Error Message/Notification/Empty State - Brief Description}
+3. Original Copy: {"Reservation failed! Because {{hotel_name}}'s {{room_type}} has an inventory conflict, please adjust the time or date."}
+4. Please review according to the checklist, optimize the copy's tone and wording, and provide suggested button copy. Please output both Traditional Chinese and English versions simultaneously.
 
 ---
 
-## 📝 快速檢查清單 (Checklist)
+## 🛠️ Future Roadmap (Automation & Tools)
+Future updates will add common vocabulary knowledge for various product lines, such as terms for booking, waitlisting, standby, and hotel terms like C/I, C/O, etc.
 
-* [ ] **清晰簡潔**：句子是否能再短？是否只解決一件事？
-* [ ] **行動導向**：是否提供明確的下一步（按鈕文字為動詞+受詞）？
-* [ ] **同理心**：錯誤訊息是否遵循「承認問題 + 解法」公式，而非責備用戶？
-* [ ] **變數規範**：是否避免將變數置於句中以防翻譯破版（Label: Value）？
-* [ ] **中文優先**：中文介面是否誤用了 Email、Address 等英文詞彙？
+To make the guidelines easier to integrate into the development workflow, the `scripts/` folder is slated for the development of the following automation tools:
+
+* **Copy Linter**: Automatically detects errors violating `SKILL.md` guidelines, such as "variables in the middle of a sentence" or "half-width punctuation".
+* **Figma Terminology Sync**: Converts `Terminology.md` to JSON format for Figma plugins to call upon, enabling one-click switching of multilingual copy.
+* **AI Agent Encapsulation**: Combines the knowledge base with automation scripts to achieve automated reviews and cross-system updates (e.g., syncing to Notion or Slack).
+* **Multilingual Layout Breakage Prediction**: Based on the language length differences mentioned in UX Writing.md (e.g., English/Vietnamese is usually longer than Chinese), the script can automatically generate a test list simulating long text to pre-determine if buttons or tables will break due to text expansion.
+
+---
+
+## 📝 Quick Checklist
+
+* [ ] **Clear and Concise**: Can the sentence be shorter? Does it solve only one thing?
+* [ ] **Action-Oriented**: Is a clear next step provided (button text as verb + object)?
+* [ ] **Empathetic**: Do error messages follow the "Acknowledge the Problem + Solution" formula instead of blaming the user?
+* [ ] **Variable Guidelines**: Are variables avoided in the middle of sentences to prevent layout breakage during translation (Label: Value)?
+* [ ] **Chinese First**: Are English terms like Email or Address mistakenly used in the Chinese interface?
