@@ -1,21 +1,21 @@
-# 多語系常用詞彙清單 (Terminology List)
+# Multilingual Terminology List
 
-## 0. 使用規範
-- **一致性優先**：在同一個專案中，同一功能必須使用表中的統一對照詞。
-- **產業慣用**：如越南語的 "Email" 實務上多直接使用原字，不需強制翻譯為本地詞彙。
-- **B2B 語境**：本清單專為 SaaS、ERP、POS 等管理系統設計，語氣中性專業。
+## 0. Usage Guidelines
+- **Consistency First**: Within the same project, the same feature must use the standardized terms from this table.
+- **Industry Conventions**: For example, in Vietnamese, "Email" is commonly used as-is in practice and does not need to be forced into a localized translation.
+- **B2B Context**: This list is specifically designed for management systems like SaaS, ERP, and POS, maintaining a neutral and professional tone.
 
-## 1. 核心介面詞彙 (Core UI Terms)
-| Key (概念) | 繁體中文 | 簡體中文 | 日文 | 英文 | 越南語 |
+## 1. Core UI Terms
+| Key (Concept) | Traditional Chinese | Simplified Chinese | Japanese | English | Vietnamese |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Dashboard** | 儀表板 | 仪表板 | ダッシュボード | Dashboard | Bảng điều khiển |
 | **Settings** | 設定 | 设置 | 設定 | Settings | Cài đặt |
 | **Home** | 首頁 | 首页 | ホーム | Home | Trang chủ |
 | **Parameter** | 參數 | 参数 | パラメータ | Parameter | Tham số |
-| **Profile** | 個人資料 | 个人資料 | プロフィール | Profile | Hồ sơ |
+| **Profile** | 個人資料 | 个人资料 | プロフィール | Profile | Hồ sơ |
 
-## 2. 操作動詞 (Action Verbs)
-| Key (概念) | 繁體中文 | 簡體中文 | 日文 | 英文 | 越南語 |
+## 2. Action Verbs
+| Key (Concept) | Traditional Chinese | Simplified Chinese | Japanese | English | Vietnamese |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Create** | 建立 | 建立 | 新規作成 | Create | Tạo |
 | **Update** | 更新 | 更新 | 更新 | Update | Cập nhật |
@@ -27,8 +27,8 @@
 | **Filter** | 篩選 | 筛选 | フィルタ | Filter | Lọc |
 | **Export** | 匯出 | 导出 | 書き出し | Export | Xuất |
 
-## 3. 系統回饋與狀態 (Status & Feedback)
-| Key (概念) | 繁體中文 | 簡體中文 | 日文 | 英文 | 越南語 |
+## 3. Status & Feedback
+| Key (Concept) | Traditional Chinese | Simplified Chinese | Japanese | English | Vietnamese |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Success** | 成功 | 成功 | 成功 | Success | Thành công |
 | **Warning** | 警告 | 警告 | 警告 | Warning | Cảnh báo |
@@ -36,18 +36,18 @@
 | **NoData** | 無資料 | 无数据 | データなし | No data | Không có dữ liệu |
 | **Loading** | 載入中 | 加载中 | 読み込み中 | Loading | Đang tải |
 
-## 4. 情境化提示訊息模板 (Contextual Messaging)
+## 4. Contextual Messaging Templates
 
-### 重複性驗證 (Duplicate Check)
-- **繁體中文**: `{XXX}` 代號與現有資料重複，請重新輸入。
-- **簡體中文**: `{XXX}` 代码已存在，请输入其他值。
-- **日文**: `{XXX}` のコードは使用されています。別の値を入力してください。
-- **英文**: `{XXX}` code already exists. Please enter a different value.
-- **越南語**: `{XXX}` đã tồn tại. Vui lòng nhập giá trị khác.
-- **規範**: 應描述「狀態」與「行動建議」，避免使用「無效」等負面詞語。
+### Duplicate Check
+- **Traditional Chinese**: `{XXX}` 代號與現有資料重複，請重新輸入。
+- **Simplified Chinese**: `{XXX}` 代码已存在，请输入其他值。
+- **Japanese**: `{XXX}` のコードは使用されています。別の値を入力してください。
+- **English**: `{XXX}` code already exists. Please enter a different value.
+- **Vietnamese**: `{XXX}` đã tồn tại. Vui lòng nhập giá trị khác.
+- **Guideline**: Describe the "state" and provide an "actionable suggestion"; avoid using negative words like "invalid".
 
-### 必填檢查 (Required Field)
-- **繁體中文**: 請輸入 `{FieldName}`。
-- **日文**: `{FieldName}` を入力してください。
-- **英文**: Please enter `{FieldName}`.
-- **越南語**: Vui lòng nhập `{FieldName}`.
+### Required Field
+- **Traditional Chinese**: 請輸入 `{FieldName}`。
+- **Japanese**: `{FieldName}` を入力してください。
+- **English**: Please enter `{FieldName}`.
+- **Vietnamese**: Vui lòng nhập `{FieldName}`.
